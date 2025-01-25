@@ -10,11 +10,11 @@ class FlashlightApp extends StatefulWidget {
 }
 
 class _FlashlightAppState extends State<FlashlightApp> {
-  bool _isOn = false; // State to toggle flashlight
+  bool _isOn = false; 
 
   void toggleTorch() {
     setState(() {
-      _isOn = !_isOn; // Toggle the state of flashlight
+      _isOn = !_isOn; 
     });
   }
 
