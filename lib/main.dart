@@ -27,18 +27,18 @@ class _FlashlightAppState extends State<FlashlightApp> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
-              // Display torch image based on state
+           
               Image.asset(
                 _isOn
-                    ? 'assets/Group 1-2.png'  // Image when flashlight is on
-                    : 'assets/Group 1.png', // Image when flashlight is off
+                    ? 'assets/Group 1-2.png'  //  on
+                    : 'assets/Group 1.png', //  off
                 width: 300,
                 height: 535.90,
               ),
               SizedBox(height: 20),
-              // Button to toggle the flashlight
+              // Button to toggle 
               GestureDetector(
-                onTap: toggleTorch,  // When tapped, toggle the torch
+                onTap: toggleTorch,  
                 child: Container(
                   width: 136,
                   height: 36,
@@ -46,14 +46,14 @@ class _FlashlightAppState extends State<FlashlightApp> {
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(24),
                     border: Border.all(
-                      color: Color(0xFFFF9736), // Border color
+                      color: Color(0xFFFF9736), 
                       width: 1,
                     ),
                     color: _isOn ? Color(0xFFFF9736) : Colors.transparent,
                   ),
                   child: Stack(
                     children: [
-                      // Row to align "OFF" text to the left when flashlight is on
+                      
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
@@ -81,22 +81,22 @@ class _FlashlightAppState extends State<FlashlightApp> {
                           ),
                         ],
                       ),
-                      // Inner rectangle (small one for the "on" state)
+                     
                       AnimatedPositioned(
                         duration: Duration(milliseconds: 300),
-                        left: _isOn ? 57 : 0,  // Position based on state (57px for on)
+                        left: _isOn ? 57 : 0,  
                         child: Container(
                           width: 68,
                           height: 25,
                           decoration: BoxDecoration(
-                            color: _isOn ? Color(0xFFFFCB9B) : Colors.white, // Color when on or off
+                            color: _isOn ? Color(0xFFFFCB9B) : Colors.white, 
                             borderRadius: BorderRadius.circular(24),
                           ),
                           child: Center(
                             child: Text(
                               _isOn ? 'On' : 'On',
                               style: TextStyle(
-                                color: _isOn ? Colors.black : Colors.black, // Change color when active
+                                color: _isOn ? Colors.black : Colors.black, 
                                 fontSize: 16,
                                 fontWeight: FontWeight.normal,
                               ),
